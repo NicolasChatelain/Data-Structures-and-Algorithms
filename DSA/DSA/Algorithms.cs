@@ -15,7 +15,7 @@
             return false;
         }
 
-        // Assume low is inclusive, high is exclusive
+        // Assume low is inclusive, high is exclusive. Time complexity = O(log N)
         public static bool BinarySearch(int[] sortedIntegerArray, int value)
         {
             int low = 0;
@@ -43,6 +43,21 @@
 
             return false;
 
+        }
+
+
+        public static void BubbleSort(int[] integerArray)
+        {
+            for (int i = 0; i < integerArray.Length; i++)
+            {
+                for (int j = 0; j < integerArray.Length - 1 - i; j++)
+                {
+                    if (integerArray[j] > integerArray[j + 1])
+                    {
+                        (integerArray[j], integerArray[j + 1]) = (integerArray[j + 1], integerArray[j]);
+                    }
+                }
+            }
         }
     }
 }

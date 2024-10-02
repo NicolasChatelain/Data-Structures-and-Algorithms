@@ -49,5 +49,16 @@ namespace DSA.test
 
             Assert.False(result);
         }
+
+        [Fact]
+        public void BubbleSort_CorrectSorted()
+        {
+            int[] integerArray = [1, 3, 7, 4, 2];
+            int[] sortedIntegerArray = [1, 2, 3, 4, 7];
+
+            Algorithms.BubbleSort(integerArray);
+
+            Assert.Equal(sortedIntegerArray, integerArray);
+        }
     }
 }
